@@ -1,43 +1,52 @@
-// شاشة التحميل
+// Loader
 window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
 
     setTimeout(() => {
-        if (loader) {
-            loader.style.display = "none";
-        }
-    }, 1000);
+        loader.style.opacity = "0";
+        loader.style.visibility = "hidden";
+    }, 1200);
 });
 
-// تغيير لون شريط التنقل عند النزول
-const nav = document.querySelector("nav");
-
+// Navbar Scroll Effect
 window.addEventListener("scroll", () => {
-    if (!nav) return;
+    const nav = document.querySelector("nav");
 
     if (window.scrollY > 50) {
-        nav.style.background = "rgba(0,0,0,.95)";
+        nav.style.background = "rgba(0,0,0,.9)";
+        nav.style.boxShadow = "0 10px 30px rgba(0,0,0,.4)";
     } else {
-        nav.style.background = "rgba(0,0,0,.75)";
+        nav.style.background = "rgba(0,0,0,.45)";
+        nav.style.boxShadow = "none";
     }
 });
 
-// تأثير ظهور الأقسام
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
+// Cards Animation
+const cards = document.querySelectorAll(".card");
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.style.opacity="1";
+            entry.target.style.transform="translateY(0)";
         }
     });
-}, {
-    threshold: 0.2
 });
 
-document.querySelectorAll(".section").forEach(section => {
-    section.style.opacity = "0";
-    section.style.transform = "translateY(40px)";
-    section.style.transition = "all .8s ease";
+cards.forEach(card=>{
+    card.style.opacity="0";
+    card.style.transform="translateY(60px)";
+    card.style.transition=".8s";
+    observer.observe(card);
+});
 
-    observer.observe(section);
+// Smooth Buttons
+document.querySelectorAll("a").forEach(link=>{
+    link.addEventListener("mouseenter",()=>{
+        link.style.transform="scale(1.05)";
+    });
+
+    link.addEventListener("mouseleave",()=>{
+        link.style.transform="scale(1)";
+    });
 });
