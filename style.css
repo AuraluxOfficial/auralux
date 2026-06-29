@@ -280,3 +280,51 @@ height:250px;
 }
 
 }
+/* ===== FEATURES ===== */
+
+.features{
+    padding:70px 20px;
+    background:#111;
+    text-align:center;
+}
+
+.features h2{
+    color:#FFD700;
+    font-size:34px;
+    margin-bottom:40px;
+}
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.feature-box{
+    background:linear-gradient(145deg,#1b1b1b,#111);
+    border:1px solid rgba(255,215,0,.25);
+    border-radius:18px;
+    padding:30px 20px;
+    transition:.35s;
+    box-shadow:0 0 15px rgba(255,215,0,.08);
+}
+
+.feature-box:hover{
+    transform:translateY(-10px);
+    border-color:#FFD700;
+    box-shadow:0 0 30px rgba(255,215,0,.35);
+}
+
+.feature-box h3{
+    color:#FFD700;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.feature-box p{
+    color:#ddd;
+    line-height:1.8;
+    font-size:16px;
+}
