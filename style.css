@@ -132,3 +132,102 @@ nav ul li a:hover{
     text-decoration:none;
     border-radius:50px;
     font-weight:bold;
+/* ===== PREMIUM NAVBAR ===== */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,215,0,.15);
+    z-index:9999;
+    transition:.4s;
+}
+
+nav:hover{
+    background:rgba(0,0,0,.7);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:900;
+    color:#fff;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:gold;
+    text-shadow:0 0 15px gold;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+    position:relative;
+}
+
+nav ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:gold;
+    transition:.3s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+nav ul li a:hover{
+    color:gold;
+}
+
+.btn{
+    box-shadow:0 0 20px gold;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 0 35px gold;
+}
+
+.hero{
+    padding-top:120px;
+}
+
+.content h1{
+    text-shadow:0 0 25px gold;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px gold;
+    }
+    to{
+        text-shadow:0 0 35px gold;
+    }
+}
+
+html{
+    scroll-behavior:smooth;
+}
