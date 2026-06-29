@@ -132,7 +132,8 @@ nav ul li a:hover{
     text-decoration:none;
     border-radius:50px;
     font-weight:bold;
-/* ===== PREMIUM NAVBAR ===== */
+
+    /* ===== PREMIUM NAVBAR ===== */
 
 nav{
     position:fixed;
