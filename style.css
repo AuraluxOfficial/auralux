@@ -371,3 +371,52 @@ height:250px;
     transform:translateY(-4px);
     box-shadow:0 10px 30px rgba(255,215,0,.4);
 }
+/* ===== Luxury Banner ===== */
+
+.luxury-banner{
+    padding:80px 20px;
+    background:linear-gradient(135deg,#0b0b0b,#171717,#0b0b0b);
+    text-align:center;
+}
+
+.banner-content{
+    max-width:800px;
+    margin:auto;
+    padding:50px 30px;
+    border:1px solid rgba(255,215,0,.25);
+    border-radius:20px;
+    background:rgba(255,255,255,.03);
+    backdrop-filter:blur(8px);
+    box-shadow:0 0 40px rgba(255,215,0,.15);
+}
+
+.banner-content h2{
+    color:#FFD700;
+    font-size:42px;
+    margin-bottom:20px;
+    letter-spacing:3px;
+}
+
+.banner-content p{
+    color:#ddd;
+    font-size:20px;
+    line-height:2;
+    margin-bottom:35px;
+}
+
+.banner-btn{
+    display:inline-block;
+    padding:16px 40px;
+    background:#FFD700;
+    color:#000;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.banner-btn:hover{
+    background:#fff;
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(255,215,0,.35);
+}
