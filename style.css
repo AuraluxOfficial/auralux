@@ -134,3 +134,115 @@ transition:.3s;
 transform:scale(1.08);
 box-shadow:0 0 30px gold;
 }
+.section{
+padding:120px 8%;
+text-align:center;
+}
+
+.section h2{
+font-size:45px;
+margin-bottom:50px;
+color:gold;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+}
+
+.card{
+background:#161616;
+border-radius:20px;
+overflow:hidden;
+transition:.4s;
+box-shadow:0 0 20px rgba(255,215,0,.08);
+}
+
+.card:hover{
+transform:translateY(-12px);
+box-shadow:0 0 35px rgba(255,215,0,.4);
+}
+
+.card img{
+width:100%;
+height:330px;
+object-fit:cover;
+display:block;
+}
+
+.card h3{
+margin:20px 0 10px;
+font-size:24px;
+}
+
+.card p{
+padding:0 20px 25px;
+color:#cfcfcf;
+line-height:1.7;
+}
+
+#about{
+background:#111;
+}
+
+#contact{
+background:#080808;
+}
+
+#contact p{
+font-size:20px;
+margin:15px 0;
+}footer{
+background:#000;
+padding:30px;
+text-align:center;
+color:#888;
+font-size:15px;
+border-top:1px solid #222;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+padding:20px;
+}
+
+nav ul{
+margin-top:15px;
+gap:18px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.logo{
+font-size:28px;
+}
+
+.content h1{
+font-size:38px;
+}
+
+.content p{
+font-size:18px;
+}
+
+.section{
+padding:80px 20px;
+}
+
+.section h2{
+font-size:32px;
+}
+
+.card img{
+height:250px;
+}
+
+.btn{
+padding:14px 30px;
+font-size:16px;
+}
+
+}
