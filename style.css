@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.spinner{
+    width:70px;
+    height:70px;
+    border:5px solid rgba(255,255,255,.15);
+    border-top:5px solid gold;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+#loader h2{
+    color:gold;
+    margin-top:25px;
+    letter-spacing:8px;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(15px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:34px;
+    font-weight:900;
+    color:white;
+}
+
+.logo span{
+    color:gold;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:gold;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    background:linear-gradient(135deg,#090909,#1b1b1b);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#d4af3720,transparent 60%);
+}
+
+.content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    padding:20px;
+}
+
+.content h1{
+    font-size:70px;
+    color:gold;
+    margin-bottom:25px;
+}
+
+.content p{
+    font-size:24px;
+    color:#ddd;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:40px;
+    padding:18px 45px;
+    background:gold;
+    color:black;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
