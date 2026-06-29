@@ -1,62 +1,127 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AURA LUX | Luxury Perfumes</title>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+    scroll-behavior:smooth;
+}
 
-  <link rel="stylesheet" href="style.css">
+body{
+    background:#090909;
+    color:#fff;
+}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
-</head>
+#loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:.6s;
+}
 
-<body>
+.spinner{
+    width:70px;
+    height:70px;
+    border:6px solid #444;
+    border-top:6px solid gold;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+    margin-bottom:20px;
+}
 
-<div id="loader">
-  <div class="spinner"></div>
-  <h2>AURA LUX</h2>
-</div>
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
 
-<header>
-  <nav>
-    <div class="logo">AURA <span>LUX</span></div>
+#loader h2{
+    color:gold;
+    letter-spacing:8px;
+}
 
-    <ul>
-      <li><a href="#hero">الرئيسية</a></li>
-      <li><a href="#products">العطور</a></li>
-      <li><a href="#about">من نحن</a></li>
-      <li><a href="#contact">تواصل</a></li>
-    </ul>
-  </nav>
-</header>
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:20px 8%;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(10px);
+    z-index:100;
+}
 
-<section id="hero" class="hero">
-  <div class="content">
-    <h1>مرحباً بكم في AURA LUX</h1>
-    <p>عطور فاخرة بجودة استثنائية وأناقة ملكية.</p>
-    <a href="#products" class="btn">اكتشف العطور</a>
-  </div>
-</section>
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-<section id="products" class="content">
-  <h2>العطور</h2>
-  <p>قريباً سيتم عرض مجموعة AURA LUX الفاخرة.</p>
-</section>
+.logo{
+    color:#fff;
+    font-size:30px;
+    font-weight:900;
+}
 
-<section id="about" class="content">
-  <h2>من نحن</h2>
-  <p>علامة مغربية متخصصة في صناعة العطور الفاخرة بإلهام عالمي.</p>
-</section>
+.logo span{
+    color:gold;
+}
 
-<section id="contact" class="content">
-  <h2>تواصل معنا</h2>
-  <p>📞 +212 606240329</p>
-  <p>📧 Auralux.business@gmail.com</p>
-</section>
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
 
-<script src="script.js"></script>
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
 
-</body>
-</html>
+nav a:hover{
+    color:gold;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    background:gold;
+    color:#000;
+    padding:15px 40px;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:bold;
+}
+
+section{
+    padding:100px 10%;
+}
+
+h2{
+    color:gold;
+    margin-bottom:20px;
+}
