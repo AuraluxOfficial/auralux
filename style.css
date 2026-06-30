@@ -65,17 +65,20 @@ color:#D4AF37;
 
 /* HERO */
 
-.hero{
-height:100vh;
-background: url("hero.JPG") center center/cover no-repeat;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-position:relative;
-}
 
-.overlay{
+
+.hero{
+    height:100vh;
+    min-height:700px;
+    background: url("hero.JPG") center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+.voerlay{
 position:absolute;
 top:0;
 left:0;
