@@ -375,8 +375,11 @@ height:250px;
 
 .luxury-banner{
     padding:80px 20px;
-    background:linear-gradient(135deg,#0b0b0b,#171717,#0b0b0b);
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("hero.JPG") center center/cover no-repeat;
     text-align:center;
+}
 }
 
 .banner-content{
