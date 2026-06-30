@@ -502,3 +502,15 @@ height:250px;
 .review-card h4{
     color:#FFD700;
 }
+/* Scroll Animation */
+
+.reveal{
+opacity:0;
+transform:translateY(80px);
+transition:all 1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
